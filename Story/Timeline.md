@@ -1,0 +1,14 @@
+#Tag 1: 23. Mai 1940
+#Tag 2: 24. Mai 1940
+#Tag 3: 25. Mai 1940
+#Tag 4: 26. Mai 1940
+#Tag 5: 27. Mai 1940
+#Tag 6: 28. Mai 1940
+#Tag 7: 29. Mai 1940
+#Tag 8: 30. Mai 1940
+#Tag 9: 31. Mai 1940
+#Tag 10: 01. Juni 1940
+#Tag 11: 02. Juni 1940
+#Tag 12: 03. Juni 1940
+#Tag 13: 04. Juni 1940
+#Tag 14: 05. Juni 1940
