@@ -1,5 +1,6 @@
-#Setting:
-Kriegsanfang Schlacht von Dünnkirchen. Leuchtturm an der Küste.  Leuchtturmwärter bekommt über empfangene Funksprüche und über einen Fernschreiber das Kriegsgeschehen mit.
+# Setting:
+Kriegsanfang Schlacht von Dünnkirchen. Leuchtturm an der Küste.  Leuchtturmwärter bekommt über empfangene Funksprüche und über einen Fernschreiber das Kriegsgeschehen mit. 23. Mai bis 5.Juni 1940. Die Schacht um Dünnkirchen beginnt am 26. Mai
+
 
 # Grobe Story:
 Der Alltag eines Leuchtturmwärters wird erzählt.  Am Anfag wird das Spielgeschehen durch Alltagsaufgaben bestimmt.
@@ -26,8 +27,21 @@ Jeder Tag beginnt mit aufstehen und endet mit Ins Bett gehen.  Diese Aktionen mu
 Das Funkgerät geht kaputt und muss repariert werden.
 [TODO] definiere Aufgabe.
 Wegen fehlender Ersatzteile ist eine vollständige Reperatur nicht möglich. Das Funkgerät kann ab jetzt nur noch empfangen.
-### Fernschreiber Nachrichten:
-Es kommen an verschiedenen Tagen FernschreiberNachrichten an, diese müssen gelesen werden, sonst weigert sich der Charakter ins Bett zu gehen.
-### Funksprüche:
-Beim Betreten des Erdgeschosses ertönen Funksprüche. Teilweise unedeutende Meldungen wie Wettermeldungen und teilweise Milestone Meldungen.
 
+## Fernschreiber Nachrichten:
+Es kommen an verschiedenen Tagen FernschreiberNachrichten an, diese müssen gelesen werden, sonst weigert sich der Charakter ins Bett zu gehen.
+
+## Funksprüche:
+Beim Betreten des Erdgeschosses ertönen Funksprüche. Teilweise unedeutende Meldungen wie Wettermeldungen und teilweise Milestone Meldungen.
+###Milestone Funkspruch: Ein Fischerboot verschwindet
+Nach mehreren Tagen verschwindet eines der beiden Fischerboote
+
+
+#Storylines
+##Fischerboote
+##Kryptische Funksprüche
+ROT13 kodierte Funksprüche zur Belustigung
+##Wettermeldungen
+Es gibt täglich Wettermeldungen mit Datum. Das Wetter wird im Spielverlauf schlechter.
+##Schlacht von Dünkirchen
+Die Handlung erstreckt sich während der Schlacht von Dünnkirchen
