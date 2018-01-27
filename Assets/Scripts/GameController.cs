@@ -31,6 +31,16 @@ public class GameController : MonoBehaviour
                     mBoxCtrl.SetMsg("Ich denke ich sollte mir erst die Zähne putzen?");
                 }else if(!occuredActions.TryGetValue("essen", out temp)){
                     mBoxCtrl.SetMsg("Ich hab noch garnichts gegessen!");
+                }else if(!occuredActions.TryGetValue("erkunde_wohnzimmer", out temp)){
+                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                }else if(!occuredActions.TryGetValue("erkunde_funkraum", out temp)){
+                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                }else if(!occuredActions.TryGetValue("erkunde_werkstatt", out temp)){
+                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                }else if(!occuredActions.TryGetValue("erkunde_birnenraum", out temp)){
+                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                }else if(!occuredActions.TryGetValue("erkunde_keller", out temp)){
+                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
                 }else{
                     mBoxCtrl.SetMsg("Tzzzzzz....");
                     occuredActions.Add(Action, true);
@@ -148,6 +158,46 @@ public class GameController : MonoBehaviour
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
                 mBoxCtrl.SetMsg("Das ist mein Funkgeraet. Aber es ist schon lange kaputt. Es kann nur noch empfangen.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "erkunde_wohnzimmer":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.SetMsg("Das ist mein Wohnzimmer.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "erkunde_funkraum":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.SetMsg("Das ist mein Funkraum.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "erkunde_werkstatt":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.SetMsg("Das ist meine tolle Werkstatt.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "erkunde_birnenraum":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.SetMsg("Hier muss ich immer das Licht an und ausmachen.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "erkunde_keller":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.SetMsg("Das ist mein Keller.");
                 occuredActions.Add(Action, true);
                 break;
             }

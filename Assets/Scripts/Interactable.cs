@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour
     public InteractionTypeEnum InteractionType;
     public bool HideColliderOnGoingInactive = true;
     public bool HideGameobjectOnGoingInactive = true;
+    public bool AutoActivate = false;
     public bool ToggleStartValue;
     public string ActivateAction = "DebugActivateInteractable";
     public string DeactivateAction = "DebugDeactivateInteractable";
