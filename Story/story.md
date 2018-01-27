@@ -5,19 +5,19 @@ Kriegsanfang Schlacht von Dünnkirchen. Leuchtturm an der Küste.  Leuchtturmwärte
 # Grobe Story:
 Der Alltag eines Leuchtturmwärters wird erzählt.  Am Anfag wird das Spielgeschehen durch Alltagsaufgaben bestimmt.
 Das Außengeschehen ist erst sehr ruhig. Es wird eine Geschichte um zwei Fischerboote aufgebaut, welche sich regelmäßig freunschaftlich anfunken. Nach einiger Zeit antwortet Boot #2 nicht mehr auf Funksprüche. Boot #1 geht auf die Suche. Das markiert den lokalen Kriegsanfang.
-Die Spannung der globalen Story nimmt bis zur Hälfte der Story zu. Hiernach folgt ein Tag unerwarteter Ruhe. An diesem Tag passiert nichts außer Alltagsaufgaben wie Blumengiessen.
+Die Spannung der globalen Story nimmt bis zur Hälfte der Story zu. Hiernach folgt ein Tag unerwarteter Ruhe. An diesem Tag passiert nichts außer Alltagsaufgaben wie aufstehen, Blumengiessen, Essen etc.
 Am Tag darauf wir der Grund der Ruhe deutlich. Der Heimathafen des Wärters wurde bombardiert, weshalb keine Funksprüche mehr abgegeben werden konnten.
 
-Ab diesem Moment verschlechtert sich die Lage des Wärters kontinuierlich. Das Leben zerfällt genau so wie der Leuchtturm. Die Stimmung wird schlechter Aufgaben gehen schief. Der Wärter muss sich langsam zurückziehen, bis er zum Schluss Schutz im Keller sucht. Der Leuchtturm fällt über ihm zusammen und er wird eingesperrt.  Er hört durch das noch funktionierende Funkgerät im EG den weiteren Verlauf der Ereignisse, hat jedoch keine Hoffnung auf Rettung. Mit jeder Aktion des Spielers zoomt die Kamera weiter vom Geschehen weg, bis das Spiel nicht mehr spielbar ist und endet.
+Ab diesem Moment verschlechtert sich die Lage des Wärters kontinuierlich. Das Leben zerfällt genau so wie der Leuchtturm. Die Stimmung wird schlechter und Aufgaben gehen schief. Der Wärter muss sich langsam zurückziehen, bis er zum Schluss Schutz im Keller sucht. Der Leuchtturm fällt über ihm zusammen und er wird dadurch eingesperrt. Er hört durch das noch funktionierende Funkgerät im EG den weiteren Verlauf der Ereignisse, hat jedoch keine Hoffnung auf Rettung. Mit jeder Aktion des Spielers zoomt die Kamera weiter vom Geschehen weg, bis das Spiel nicht mehr spielbar ist und endet.
 
 # Spielmechanik:
 Es gibt Milestones, welche der Spieler absolvieren muss und optionale Aufgaben, welche die Zufriedenheit des Wärters aufrechterhalten.
 ## Optionale Aufgaben: Belohnung/ Motivation:
-Optionale Aufgaben sind für den Spielverlauf nicht erforderlich, nicht erledigte Aufgaben erschweren den Spielablauf.
-Führt der Spieler optionale Aufgaben nicht durch , werden diese zu einer Vorwurfsliste hinzugefügt diese Vorwürfe macht sich der Wärter regelmäßig, selber. Werden zu viele Aufgaben nicht erledigt, möchte er die Räume in denen diese Aufgaben auf ihn warten nicht mehr betreten.  Es braucht nur Überredungskünste um die entsprechenden Orte zu betreten. Zum Beispiel werden mehrere Klicks benötigt um einen Raum zu betreten oder er geht auf der anderen Seite des Raumes wieder raus. Hierdurch wird der Charakter des Wärters hervorgehoben.
+Optionale Aufgaben sind für den Spielverlauf nicht erforderlich, nicht erledigte Aufgaben erschweren aber den Spielablauf.
+Führt der Spieler optionale Aufgaben nicht durch, werden diese zu einer Vorwurfsliste hinzugefügt diese Vorwürfe macht sich der Wärter regelmäßig selber. Werden zu viele Aufgaben nicht erledigt, möchte er die Räume in denen diese Aufgaben auf ihn warten nicht mehr betreten.  Es braucht nur Überredungskünste um die entsprechenden Orte zu betreten. Zum Beispiel werden mehrere Klicks benötigt um einen Raum zu betreten oder er geht auf der anderen Seite des Raumes wieder raus. Hierdurch wird der Charakter des Wärters hervorgehoben.
 
 ### Toilette:
-Der Wärter mus einmal am Tag auf Toilette, Duschen und Abends Zähneputzen.
+Der Wärter mus einmal am Tag auf Toilette außerdem muss er Duschen und Abends Zähneputzen.
 
 ## Milestones:
 Milestone Aktionen muss der Spieler ausführen. Die Story entfaltet sich anhand dieser Milestones.
@@ -44,4 +44,4 @@ ROT13 kodierte Funksprüche zur Belustigung
 ##Wettermeldungen
 Es gibt täglich Wettermeldungen mit Datum. Das Wetter wird im Spielverlauf schlechter.
 ##Schlacht von Dünkirchen
-Die Handlung erstreckt sich während der Schlacht von Dünnkirchen
+Die Handlung erstreckt sich während der Schlacht von Dünnkirchen Funkspüche der Schlacht und der begleitenden Rettungsaktion werden immer wieder empfangen.
