@@ -18,7 +18,6 @@ public class CharController : MonoBehaviour
     private LayerMask _interactableLayerMask;
 
     private bool _canClimb = false;
-    private bool _interactabtable = false;
 
     // Use this for initialization
     void Start()
@@ -37,8 +36,6 @@ public class CharController : MonoBehaviour
         {
             _positionVector.y -= DropRate;
             this.transform.position = _positionVector;
-
-            Debug.Log(transform.position);
 
             RaycastHit2D terrainHit = Physics2D.Raycast(transform.position + Vector3.up, -Vector2.up, 10, _terrainLayerMask.value);
             if (terrainHit.collider != null)
@@ -68,11 +65,11 @@ public class CharController : MonoBehaviour
         RaycastHit2D interactableHit = Physics2D.Raycast(transform.position, Vector2.down, 3, _interactableLayerMask);
         if (interactableHit.collider != null)
         {
-            _interactabtable = true;
-        }
-        else 
-        {
-            _interactabtable = false;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                interactableHit.collider.gameObject.GetComponent<Interactable>().Activate();
+                _animator.Play("Hurt");
+            }
         }
 
         float inputX = Input.GetAxis("Horizontal");
@@ -98,12 +95,6 @@ public class CharController : MonoBehaviour
         else if (!ismoving && wasmoving)
         {
             _animator.SetBool("Walking", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && _interactabtable)
-        {
-            //Trigger interactable script here
-            _animator.Play("Hurt");
         }
 
         this.transform.position = _positionVector;
