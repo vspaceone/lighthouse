@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                
+
                 if(!occuredActions.TryGetValue("zaehne_putzen", out temp)){
                     mBoxCtrl.Initialize("Ich muss erst Zaehne putzen.");
                 }else{
@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
 
         audioSource.loop = loop;
 
-        audioSource.Play();
+        //audioSource.Play();
     }
 
     IEnumerator FadeOutSound(GameObject go, float duration = 2f)
