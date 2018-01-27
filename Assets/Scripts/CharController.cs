@@ -7,7 +7,7 @@ public class CharController : MonoBehaviour
 
     public float DistanceFromGround = 0.5f;
     public float DropRate = 0.3f;
-    public float MovementSpeedMultiplyer = 0.3f;
+    public float MovementSpeedMultiplyer = 0.1f;
 
     private Vector2 _positionVector;
     private Animator _animator;
@@ -79,13 +79,13 @@ public class CharController : MonoBehaviour
         bool ismoving = (inputX != 0);
         bool wasmoving = _animator.GetBool("Walking");
 
-        if (inputX > 0 && _spriteRenderer.flipX)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        else if (inputX < 0 && !_spriteRenderer.flipX)
+        if (inputX > 0 && !_spriteRenderer.flipX)
         {
             _spriteRenderer.flipX = true;
+        }
+        else if (inputX < 0 && _spriteRenderer.flipX)
+        {
+            _spriteRenderer.flipX = false;
         }
 
         if (ismoving && !wasmoving)
