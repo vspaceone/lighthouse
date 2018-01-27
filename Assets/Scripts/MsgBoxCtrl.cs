@@ -6,14 +6,14 @@ public class MsgBoxCtrl : MonoBehaviour {
 
 
 	public GameObject guiGameObj;
-	private UnityEngine.UI.Text guiText;
+	private UnityEngine.UI.Text uiText;
 	private string txt;
 
 	// Use this for initialization
 	IEnumerator Start () {
 
-		guiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
-		guiText.text = "";
+		uiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
+		uiText.text = "";
 
 		yield return new WaitForSecondsRealtime(3);
 
@@ -27,8 +27,8 @@ public class MsgBoxCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		guiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
-		guiText.text = txt;
+		uiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
+		uiText.text = txt;
 	
 	}
 }
