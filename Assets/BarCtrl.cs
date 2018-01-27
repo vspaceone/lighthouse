@@ -9,7 +9,10 @@ public class BarCtrl : MonoBehaviour {
 	private UnityEngine.UI.Text txtAction;
 	private UnityEngine.UI.Text txtDay;
 	private string action;
-	private int dayNumber;
+
+	private string[] days = { "23.Mai 1940", "24.Mai 1940", "25.Mai 1940", "26.Mai 1940",
+	"27.Mai 1940", "28.Mai 1940", "29.Mai 1940", "30.Mai 1940", "31.Mai 1940",
+"1.Juni 1940", "2.Juni 1940", "3.Juni 1940", "4.Juni 1940", "5.Juni 1940" };
 
 	// Use this for initialization
 	void Start () {
@@ -17,17 +20,12 @@ public class BarCtrl : MonoBehaviour {
 		txtAction = gObjAction.GetComponent<UnityEngine.UI.Text>();
 		txtAction.text = "";
 		txtDay = gObjDay.GetComponent<UnityEngine.UI.Text>();
-		txtDay.text = "Day1";
+		txtDay.text = "";
 
 	}
-
 
 	public void SetAction( string message ){
 		action = message;
-	}
-
-	public void SetDay( int day ){
-		dayNumber = 1;
 	}
 
 	// Update is called once per frame
@@ -36,7 +34,7 @@ public class BarCtrl : MonoBehaviour {
 		txtAction.text = action;
 
 		txtDay = gObjDay.GetComponent<UnityEngine.UI.Text>();
-		txtDay.text = "Day" + dayNumber;
+		txtDay.text = days[Global.Gamestate.dayNumber];
 
 	}
 }
