@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 22057454}
   - component: {fileID: 22057456}
   - component: {fileID: 22057455}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StairsKellerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,8 +210,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22057453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.77, y: -24.8, z: 0}
-  m_LocalScale: {x: 125.25322, y: 1152.4495, z: 1}
+  m_LocalPosition: {x: 12.735, y: -23.961, z: 0}
+  m_LocalScale: {x: 118.26084, y: 1320.2661, z: 1}
   m_Children: []
   m_Father: {fileID: 347596724}
   m_RootOrder: 10
@@ -290,6 +290,36 @@ GameObject:
   m_PrefabParentObject: {fileID: 1530598873813892, guid: c6a0c6e24149a4868833e0e90005967f,
     type: 2}
   m_PrefabInternal: {fileID: 1087826251}
+--- !u!1 &204006372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 204006373}
+  m_Layer: 0
+  m_Name: Lighthouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &204006373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204006372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.9605, y: 9.849799, z: -5.484375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 528017072}
+  - {fileID: 2085530072}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254925798
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +330,7 @@ GameObject:
   - component: {fileID: 254925799}
   - component: {fileID: 254925801}
   - component: {fileID: 254925800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundBirnenraum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +429,7 @@ GameObject:
   - component: {fileID: 310497237}
   - component: {fileID: 310497239}
   - component: {fileID: 310497238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundGarten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +528,7 @@ GameObject:
   - component: {fileID: 324159800}
   - component: {fileID: 324159802}
   - component: {fileID: 324159801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundWohnzimmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +666,7 @@ GameObject:
   - component: {fileID: 471806069}
   - component: {fileID: 471806071}
   - component: {fileID: 471806070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StairsWerkstattUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +808,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.238755
+  orthographic size: 7.9835777
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -820,6 +850,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 175383763}
   offset: {x: 0, y: 0, z: 0}
+--- !u!1 &528017070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 528017072}
+  - component: {fileID: 528017071}
+  m_Layer: 0
+  m_Name: lighthouse_border (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &528017071
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528017070}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 87db6afb794a745e5acd81027cb86e6e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.93, y: 0.66}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &528017072
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528017070}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.7905, y: 3.419201, z: 5.484375}
+  m_LocalScale: {x: 25.44021, y: 23.642185, z: 1}
+  m_Children: []
+  m_Father: {fileID: 204006373}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561656464
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +1006,7 @@ GameObject:
   - component: {fileID: 742789110}
   - component: {fileID: 742789112}
   - component: {fileID: 742789111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StairsWohnUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,11 +1250,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4371773741429160, guid: c6a0c6e24149a4868833e0e90005967f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.18
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: 4371773741429160, guid: c6a0c6e24149a4868833e0e90005967f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.22
+      value: -15.2
       objectReference: {fileID: 0}
     - target: {fileID: 4371773741429160, guid: c6a0c6e24149a4868833e0e90005967f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1182,6 +1285,11 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114769816508040132, guid: c6a0c6e24149a4868833e0e90005967f,
+        type: 2}
+      propertyPath: DistanceFromGround
+      value: 2.18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6a0c6e24149a4868833e0e90005967f, type: 2}
   m_IsPrefabParent: 0
@@ -1194,6 +1302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183970385}
   - component: {fileID: 1183970384}
+  - component: {fileID: 1183970386}
   m_Layer: 0
   m_Name: weather
   m_TagString: Untagged
@@ -1252,12 +1361,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1183970383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7, y: 9, z: 0}
+  m_LocalPosition: {x: 6.7, y: 9, z: 15}
   m_LocalScale: {x: 6.2853036, y: 6.2853036, z: 6.2853036}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183970386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183970383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ec43d4c4a584c05b31ba2a3a6d1d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 175383763}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1320892416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1463,7 @@ GameObject:
   - component: {fileID: 1334132241}
   - component: {fileID: 1334132240}
   - component: {fileID: 1334132242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundFunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1474,7 +1596,7 @@ GameObject:
   - component: {fileID: 1490875086}
   - component: {fileID: 1490875085}
   - component: {fileID: 1490875087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StairsFunkUp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1695,7 @@ GameObject:
   - component: {fileID: 1531344390}
   - component: {fileID: 1531344392}
   - component: {fileID: 1531344391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundWerkstatt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1672,7 +1794,7 @@ GameObject:
   - component: {fileID: 1615597948}
   - component: {fileID: 1615597950}
   - component: {fileID: 1615597949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundKeller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1844,7 +1966,7 @@ GameObject:
   - component: {fileID: 1899371008}
   - component: {fileID: 1899371007}
   - component: {fileID: 1899371009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StairsFunkUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1933,3 +2055,76 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!1 &2085530071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2085530072}
+  - component: {fileID: 2085530073}
+  m_Layer: 0
+  m_Name: lighthouse_border (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085530072
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085530071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.8705, y: -13.109799, z: 5.484375}
+  m_LocalScale: {x: 25.44021, y: 26.88768, z: 1}
+  m_Children: []
+  m_Father: {fileID: 204006373}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2085530073
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085530071}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 87db6afb794a745e5acd81027cb86e6e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.93, y: 0.66}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

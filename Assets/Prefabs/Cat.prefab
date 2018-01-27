@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b33f99b0c516ed48ac31de27b74d56b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceFromGround: 0.5
+  DistanceFromGround: 2.18
   DropRate: 0.2
   MovementSpeedMultiplyer: 0.3
 --- !u!212 &212264848146840694
