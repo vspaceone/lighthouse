@@ -15,6 +15,9 @@ public class GameController : MonoBehaviour
         //biggest f-ing switch monster ever
         bool temp = false;
 
+
+        
+
         switch (Action)
         {
             case "schlafen":
@@ -22,12 +25,82 @@ public class GameController : MonoBehaviour
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
 
-                if(!occuredActions.TryGetValue("zaehne_putzen", out temp)){
-                    mBoxCtrl.Initialize("Ich muss erst Zaehne putzen.");
+                if(!occuredActions.TryGetValue("licht_anschalten", out temp)){
+                    mBoxCtrl.Initialize("Ich muss erst das Licht anschalten.");
+                }else if(!occuredActions.TryGetValue("zaehne_putzen", out temp)){
+                    mBoxCtrl.Initialize("Ich denke ich sollte mir erst die Zähne putzen?");
+                }else if(!occuredActions.TryGetValue("essen", out temp)){
+                    mBoxCtrl.Initialize("Ich hab noch garnichts gegessen!");
                 }else{
                     mBoxCtrl.Initialize("Tzzzzzz....");
                     occuredActions.Add(Action, true);
                 }
+                break;
+            }
+            case "licht_anschalten":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Es wird Zeit, das Licht anzuschalten.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "licht_ausschalten":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Es ist hell. Wir brauchen kein Licht mehr.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "dose_holen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "kochen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+
+                if(!occuredActions.TryGetValue("dose_holen", out temp)){
+                    mBoxCtrl.Initialize("Ich denke ich sollte mir erst was zum kochen besorgen...");
+                }else{
+                    mBoxCtrl.Initialize("Ravioli sind auch schön einfach. Nur kein Stress.");
+                    occuredActions.Add(Action, true);
+                }
+                break;
+            }
+            case "essen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+
+                if(!occuredActions.TryGetValue("kochen", out temp)){
+                    mBoxCtrl.Initialize("Ich denke ich sollte mir erst was kochen. Oder nicht?");
+                }else{
+                    mBoxCtrl.Initialize("Die Ravioli sind super");
+                    occuredActions.Add(Action, true);
+                }
+                break;
+            }
+            case "blumen_giessen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Ich liebe meine Blumen.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "karte_anschauen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
+                occuredActions.Add(Action, true);
                 break;
             }
             case "zaehne_putzen":
@@ -38,11 +111,44 @@ public class GameController : MonoBehaviour
                 occuredActions.Add(Action, true);
                 break;
             }
-            case "dose_holen":
+            case "generator_nachfuellen":
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
+                mBoxCtrl.Initialize("Ja der braucht schon wieder Sprit...");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "tomaten_streicheln":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Die Tomaten lieben es wenn man sie streichelt.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "in_briefkasten_schauen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Oh. Leider kein Brief für mich.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "fernschreiber_anschauen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Das ist mein Fernschreiber. Hier kommen regelmäßig wichtige Neuigkeiten rein.");
+                occuredActions.Add(Action, true);
+                break;
+            }
+            case "funkgeraet_anschauen":
+            {
+                GameObject gObj = Instantiate(msgBoxPrefab);
+                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
+                mBoxCtrl.Initialize("Das ist mein Funkgeraet. Aber es ist schon lange kaputt. Es kann nur noch empfangen.");
+                occuredActions.Add(Action, true);
                 break;
             }
             case "Start":
