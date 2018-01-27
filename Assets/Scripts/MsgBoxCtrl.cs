@@ -21,14 +21,14 @@ public class MsgBoxCtrl : MonoBehaviour {
 	}
 
 
-	public void Initialize( string message ){
+	public void SetMsg( string message ){
 		txt = message;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		uiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
 		uiText.text = txt;
-	
+
 	}
 }

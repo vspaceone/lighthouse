@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
         bool temp = false;
 
 
-        
+
 
         switch (Action)
         {
@@ -26,13 +26,13 @@ public class GameController : MonoBehaviour
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
 
                 if(!occuredActions.TryGetValue("licht_anschalten", out temp)){
-                    mBoxCtrl.Initialize("Ich muss erst das Licht anschalten.");
+                    mBoxCtrl.SetMsg("Ich muss erst das Licht anschalten.");
                 }else if(!occuredActions.TryGetValue("zaehne_putzen", out temp)){
-                    mBoxCtrl.Initialize("Ich denke ich sollte mir erst die Zähne putzen?");
+                    mBoxCtrl.SetMsg("Ich denke ich sollte mir erst die Zähne putzen?");
                 }else if(!occuredActions.TryGetValue("essen", out temp)){
-                    mBoxCtrl.Initialize("Ich hab noch garnichts gegessen!");
+                    mBoxCtrl.SetMsg("Ich hab noch garnichts gegessen!");
                 }else{
-                    mBoxCtrl.Initialize("Tzzzzzz....");
+                    mBoxCtrl.SetMsg("Tzzzzzz....");
                     occuredActions.Add(Action, true);
                 }
                 break;
@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Es wird Zeit, das Licht anzuschalten.");
+                mBoxCtrl.SetMsg("Es wird Zeit, das Licht anzuschalten.");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Es ist hell. Wir brauchen kein Licht mehr.");
+                mBoxCtrl.SetMsg("Es ist hell. Wir brauchen kein Licht mehr.");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
+                mBoxCtrl.SetMsg("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -67,9 +67,9 @@ public class GameController : MonoBehaviour
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
 
                 if(!occuredActions.TryGetValue("dose_holen", out temp)){
-                    mBoxCtrl.Initialize("Ich denke ich sollte mir erst was zum kochen besorgen...");
+                    mBoxCtrl.SetMsg("Ich denke ich sollte mir erst was zum kochen besorgen...");
                 }else{
-                    mBoxCtrl.Initialize("Ravioli sind auch schön einfach. Nur kein Stress.");
+                    mBoxCtrl.SetMsg("Ravioli sind auch schön einfach. Nur kein Stress.");
                     occuredActions.Add(Action, true);
                 }
                 break;
@@ -80,9 +80,9 @@ public class GameController : MonoBehaviour
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
 
                 if(!occuredActions.TryGetValue("kochen", out temp)){
-                    mBoxCtrl.Initialize("Ich denke ich sollte mir erst was kochen. Oder nicht?");
+                    mBoxCtrl.SetMsg("Ich denke ich sollte mir erst was kochen. Oder nicht?");
                 }else{
-                    mBoxCtrl.Initialize("Die Ravioli sind super");
+                    mBoxCtrl.SetMsg("Die Ravioli sind super");
                     occuredActions.Add(Action, true);
                 }
                 break;
@@ -91,7 +91,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Ich liebe meine Blumen.");
+                mBoxCtrl.SetMsg("Ich liebe meine Blumen.");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
+                mBoxCtrl.SetMsg("Mhmmm Ravioli. Lecker. Jetzt wird gekocht...");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Immer 3 Minuten Zähne putzen. Wichtig!");
+                mBoxCtrl.SetMsg("Immer 3 Minuten Zähne putzen. Wichtig!");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -115,7 +115,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Ja der braucht schon wieder Sprit...");
+                mBoxCtrl.SetMsg("Ja der braucht schon wieder Sprit...");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -123,7 +123,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Die Tomaten lieben es wenn man sie streichelt.");
+                mBoxCtrl.SetMsg("Die Tomaten lieben es wenn man sie streichelt.");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Oh. Leider kein Brief für mich.");
+                mBoxCtrl.SetMsg("Oh. Leider kein Brief für mich.");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -139,7 +139,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Das ist mein Fernschreiber. Hier kommen regelmäßig wichtige Neuigkeiten rein.");
+                mBoxCtrl.SetMsg("Das ist mein Fernschreiber. Hier kommen regelmäßig wichtige Neuigkeiten rein.");
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -147,7 +147,7 @@ public class GameController : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.Initialize("Das ist mein Funkgeraet. Aber es ist schon lange kaputt. Es kann nur noch empfangen.");
+                mBoxCtrl.SetMsg("Das ist mein Funkgeraet. Aber es ist schon lange kaputt. Es kann nur noch empfangen.");
                 occuredActions.Add(Action, true);
                 break;
             }

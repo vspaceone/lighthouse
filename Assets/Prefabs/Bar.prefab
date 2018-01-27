@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc1824502ac44dc185ec6e5a6e89fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gObjAction: {fileID: 1874478213927726}
+  gObjDay: {fileID: 1273530278321390}
 --- !u!114 &114944603660198604
 MonoBehaviour:
   m_ObjectHideFlags: 1
