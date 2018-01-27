@@ -7,28 +7,28 @@ public class MsgBoxCtrl : MonoBehaviour {
 
 	public GameObject guiGameObj;
 	private UnityEngine.UI.Text guiText;
-	private string msg;
+	private string txt;
 
 	// Use this for initialization
 	IEnumerator Start () {
-		//guiText.text = "Hallo WElt";
+
 		guiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
 		guiText.text = "";
-		print(Time.time);
-		yield return new WaitForSecondsRealtime(2);
 
-		print(Time.time);
+		yield return new WaitForSecondsRealtime(3);
+
      	Destroy(this.gameObject);
 	}
 
 
-	void initialize( string message ){
-		msg = message;
-		guiText.text = msg;
+	public void Initialize( string message ){
+		txt = message;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//guiText.text = "Hallo Welt";	
+		guiText = guiGameObj.GetComponent<UnityEngine.UI.Text>();
+		guiText.text = txt;
+	
 	}
 }
