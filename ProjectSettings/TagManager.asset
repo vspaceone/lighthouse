@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - Ladder
+  - Audio
   layers:
   - Default
   - TransparentFX
