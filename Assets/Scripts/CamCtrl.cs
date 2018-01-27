@@ -8,7 +8,7 @@ public class CamCtrl : MonoBehaviour {
 	public GameObject player;       //Public variable to store a reference to the player game object
 
 
-	public Vector3 offset;         //Private variable to store the offset distance between the player and camera
+	public float offsetY;         //Private variable to store the offset distance between the player and camera
 
 	private static Vector3 ChangeX(Vector3 v, float x)
      {
@@ -29,13 +29,14 @@ public class CamCtrl : MonoBehaviour {
 	void Start ()
 	{
 			//Calculate and store the offset value by getting the distance between the player's position and camera's position.
-			offset = transform.position - player.transform.position;
+			transform.position = ChangeY(transform.position,player.transform.position.y);
+
 	}
 
 	// LateUpdate is called after Update each frame
 	void LateUpdate ()
 	{
 			// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-			transform.position = ChangeY(transform.position,player.transform.position.y + offset.y);
+			transform.position = ChangeY(transform.position,player.transform.position.y+offsetY);
 	}
 }
