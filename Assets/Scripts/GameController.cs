@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
                     mBoxCtrl.Initialize("Ich muss erst Zaehne putzen.");
                 }else{
                     mBoxCtrl.Initialize("Tzzzzzz....");
-                    occuredActions.add(Action, true);
+                    occuredActions.Add(Action, true);
                 }
                 break;
             }
@@ -81,6 +81,6 @@ public class GameController : MonoBehaviour
 
     void Day1AlarmClock()
     {
-        PlayAudio("319490__margau__30-seconds-alarm");
+        //PlayAudio("319490__margau__30-seconds-alarm");
     }
 }
