@@ -1438,7 +1438,12 @@ Prefab:
     - target: {fileID: 114244023661040520, guid: 3d85e09a1bf4f4956b812529b2bd6570,
         type: 2}
       propertyPath: DistanceFromGround
-      value: 2.5
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114244023661040520, guid: 3d85e09a1bf4f4956b812529b2bd6570,
+        type: 2}
+      propertyPath: MovementSpeedMultiplyer
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d85e09a1bf4f4956b812529b2bd6570, type: 2}

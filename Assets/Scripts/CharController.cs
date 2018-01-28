@@ -7,7 +7,7 @@ public class CharController : MonoBehaviour
 
     public float DistanceFromGround = 0.5f;
     public float DropRate = 0.3f;
-    public float MovementSpeedMultiplyer = 0.1f;
+    public float MovementSpeedMultiplyer = 0.09f;
 
     private Vector2 _positionVector;
     private Animator _animator;
@@ -108,24 +108,25 @@ public class CharController : MonoBehaviour
 
         if (ismoving && !_canClimb)
         {
+            _animator.speed = 0.7f;
             _animator.SetBool("Walking", true);
-            _animator.SetBool("Climbing_Stay", false);
             _animator.SetBool("Climbing_Up", false);
             _animator.SetBool("Climbing_Down", false);
         }
         else if (!ismoving && !_canClimb)
         {
+          _animator.speed = 0.7f;
             _animator.SetBool("Walking", false);
-            _animator.SetBool("Climbing_Stay", false);
             _animator.SetBool("Climbing_Up", false);
             _animator.SetBool("Climbing_Down", false);
 
         }else if(_canClimb && !isClimbing){
             _animator.SetBool("Walking", false);
-            _animator.SetBool("Climbing_Stay", true);
-            _animator.SetBool("Climbing_Up", false);
+            _animator.SetBool("Climbing_Up", true);
             _animator.SetBool("Climbing_Down", false);
+            _animator.speed = 0;
         }else if(_canClimb && isClimbing){
+          _animator.speed = 0.7f;
           if(climbUp){
             _animator.SetBool("Climbing_Up", true);
             _animator.SetBool("Climbing_Down", false);
@@ -133,7 +134,6 @@ public class CharController : MonoBehaviour
             _animator.SetBool("Climbing_Up", false);
             _animator.SetBool("Climbing_Down", true);
           }
-          _animator.SetBool("Climbing_Stay", false);
           _animator.SetBool("Walking", false);
         }
 
