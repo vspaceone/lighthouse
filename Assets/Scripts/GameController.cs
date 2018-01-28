@@ -293,5 +293,6 @@ public class GameController : MonoBehaviour
     void Day1Ocean()
     {
         //PlayAudio("400632__inspectorj__ambience-seaside-waves-close-a");
+        PlayAudio("Theme");
     }
 }
