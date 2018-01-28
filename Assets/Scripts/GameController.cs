@@ -15,9 +15,6 @@ public class GameController : MonoBehaviour
         //biggest f-ing switch monster ever
         bool temp = false;
 
-
-
-
         switch (Action)
         {
             case "schlafen":

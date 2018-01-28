@@ -57,10 +57,22 @@ public class CharController : MonoBehaviour
             _canClimb = false;
         }
 
+        float inputY = Input.GetAxis("Vertical");
         if (_canClimb)
         {
-            _positionVector.y += Input.GetAxis("Vertical");
+            _positionVector.y += inputY * MovementSpeedMultiplyer;
         }
+
+        bool isClimbing = (inputY != 0);
+        bool wasClimbing = _animator.GetBool("Climbing_Up") || _animator.GetBool("Climbing_Down");
+        bool climbUp = true;
+        if (inputY > 0 )
+        {
+          climbUp = true;;
+        }else{
+          climbUp = false;
+        }
+
 
         RaycastHit2D interactableHit = Physics2D.Raycast(transform.position, Vector2.down, 3, _interactableLayerMask);
         if (interactableHit.collider != null)
@@ -71,7 +83,7 @@ public class CharController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) || interactableHit.collider.gameObject.GetComponent<Interactable>().AutoActivate == true)
             {
                 interactableHit.collider.gameObject.GetComponent<Interactable>().Activate();
-                _animator.Play("Hurt");
+                _animator.Play("aktion");
             }
         }else{
           Global.Gamestate.hoveringAction = "";
@@ -94,13 +106,29 @@ public class CharController : MonoBehaviour
             _spriteRenderer.flipX = false;
         }
 
-        if (ismoving && !wasmoving)
+        if (ismoving && !wasmoving && !_canClimb)
         {
             _animator.SetBool("Walking", true);
         }
-        else if (!ismoving && wasmoving)
+        else if (!ismoving && wasmoving && !_canClimb)
         {
             _animator.SetBool("Walking", false);
+            _animator.SetBool("Climbing", false);
+
+        }else if(_canClimb && !isClimbing){
+            _animator.SetBool("Walking", false);
+            _animator.SetBool("CanClimb", true);
+            _animator.SetBool("Climbing_Up", false);
+            _animator.SetBool("Climbing_Down", false);
+        }else if(_canClimb && isClimbing && !wasClimbing){
+          _animator.SetBool("CanClimb", true);
+          if(climbUp){
+            _animator.SetBool("Climbing_Up", true);
+            _animator.SetBool("Climbing_Down", false);
+          }else{
+            _animator.SetBool("Climbing_Up", false);
+            _animator.SetBool("Climbing_Down", true);
+          }
         }
 
         this.transform.position = _positionVector;
