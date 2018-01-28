@@ -223,7 +223,7 @@ public class GameController : MonoBehaviour
 
         audioSource.loop = loop;
 
-        //audioSource.Play();
+        audioSource.Play();
     }
 
     IEnumerator FadeOutSound(GameObject go, float duration = 2f)
