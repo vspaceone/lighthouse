@@ -106,24 +106,26 @@ public class CharController : MonoBehaviour
             _spriteRenderer.flipX = false;
         }
 
-        if (ismoving && !wasmoving && !_canClimb)
+        if (ismoving && !_canClimb)
         {
             _animator.SetBool("Walking", true);
+            _animator.SetBool("Climbing_Stay", false);
+            _animator.SetBool("Climbing_Up", false);
+            _animator.SetBool("Climbing_Down", false);
         }
-        else if (!ismoving && wasmoving && !_canClimb)
+        else if (!ismoving && !_canClimb)
         {
             _animator.SetBool("Walking", false);
-            _animator.SetBool("Climbing", false);
+            _animator.SetBool("Climbing_Stay", false);
+            _animator.SetBool("Climbing_Up", false);
+            _animator.SetBool("Climbing_Down", false);
 
         }else if(_canClimb && !isClimbing){
-          print("CanClimb and is not climbing");
             _animator.SetBool("Walking", false);
-            _animator.SetBool("CanClimb", true);
+            _animator.SetBool("Climbing_Stay", true);
             _animator.SetBool("Climbing_Up", false);
             _animator.SetBool("Climbing_Down", false);
         }else if(_canClimb && isClimbing){
-          print("canClimb and is climbing");
-          _animator.SetBool("CanClimb", true);
           if(climbUp){
             _animator.SetBool("Climbing_Up", true);
             _animator.SetBool("Climbing_Down", false);
@@ -131,6 +133,8 @@ public class CharController : MonoBehaviour
             _animator.SetBool("Climbing_Up", false);
             _animator.SetBool("Climbing_Down", true);
           }
+          _animator.SetBool("Climbing_Stay", false);
+          _animator.SetBool("Walking", false);
         }
 
         this.transform.position = _positionVector;
