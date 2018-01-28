@@ -39,12 +39,12 @@ public class BarCtrl : MonoBehaviour {
 		actions.Add("in_briefkasten_schauen","Schaue in den Briefkasten");
 		actions.Add("fernschreiber_anschauen","Untersuche den Fernschreib");
 		actions.Add("funkgeraet_anschauen","Untersuch das Funkgeraet");
-		actions.Add("erkunde_wohnzimmer","Erkunde das Wohnzimmer");
-		actions.Add("erkunde_keller","Erkunde den Keller");
-		actions.Add("erkunde_werkstatt","Erkunde die Werkstatt");
-		actions.Add("erkunde_funkraum","Erkunde den Funkraum");
-		actions.Add("erkunde_birnenraum","Erkunde den Birnenraum");
-		actions.Add("erkunde_garten","Erkunde den Garten");
+		actions.Add("erkunde_wohnzimmer","");
+		actions.Add("erkunde_keller","");
+		actions.Add("erkunde_werkstatt","");
+		actions.Add("erkunde_funkraum","");
+		actions.Add("erkunde_birnenraum","");
+		actions.Add("erkunde_garten","");
 
 	}
 
@@ -54,13 +54,17 @@ public class BarCtrl : MonoBehaviour {
 		txtDay = gObjDay.GetComponent<UnityEngine.UI.Text>();
 		txtDay.text = days[Global.Gamestate.dayNumber];
 
-		try{
+		if( Global.Gamestate.hoveringAction != ""){
+			try{
+				txtAction = gObjAction.GetComponent<UnityEngine.UI.Text>();
+				txtAction.text = actions[Global.Gamestate.hoveringAction];
+			}catch{
+				txtAction = gObjAction.GetComponent<UnityEngine.UI.Text>();
+				txtAction.text = Global.Gamestate.hoveringAction + " (err)";
+			}
+		}else{
 			txtAction = gObjAction.GetComponent<UnityEngine.UI.Text>();
-			txtAction.text = actions[Global.Gamestate.hoveringAction];
-		}catch{
-			txtAction = gObjAction.GetComponent<UnityEngine.UI.Text>();
-			txtAction.text = Global.Gamestate.hoveringAction + " (err)";
+			txtAction.text = "";
 		}
-
 	}
 }
