@@ -10,10 +10,40 @@ public class GameController : MonoBehaviour
     private Dictionary<string, bool> occuredActions = new Dictionary<string, bool>();
     public GameObject AudioPrefab;
 
+    public void NextDay(){
+      Global.Gamestate.dayNumber++;
+    }
+
     public void Action(string Action, GameObject GO)
     {
         //biggest f-ing switch monster ever
         bool temp = false;
+        bool handled = false;
+
+        switch( Global.Gamestate.dayNumber){
+
+          case 0:
+          {
+            print("Treat day0 controller");
+            handled = GetComponent<Day0Controller>().HandleAction(Action, GO, ref occuredActions);
+            break;
+          }
+          case 1:
+          {
+            print("Treat day1 controller");
+            handled = GetComponent<Day1Controller>().HandleAction(Action, GO, ref occuredActions);
+            break;
+          }
+          default:
+          {
+            break;
+          }
+
+        }
+
+        if(handled == true){
+          return;
+        }
 
         switch (Action)
         {
@@ -22,26 +52,29 @@ public class GameController : MonoBehaviour
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
 
-                if(Global.Gamestate.lightstate == "on"){
+                if(Global.Gamestate.lightstate != "on"){
                     mBoxCtrl.SetMsg("Ich muss erst das Licht anschalten.");
                 }else if(!occuredActions.TryGetValue("zaehne_putzen", out temp)){
                     mBoxCtrl.SetMsg("Ich denke ich sollte mir erst die Zähne putzen?");
-                }else if(!occuredActions.TryGetValue("essen", out temp)){
-                    mBoxCtrl.SetMsg("Ich hab noch garnichts gegessen!");
-                }else if(!occuredActions.TryGetValue("erkunde_wohnzimmer", out temp)){
-                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
-                }else if(!occuredActions.TryGetValue("erkunde_funkraum", out temp)){
-                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
-                }else if(!occuredActions.TryGetValue("erkunde_werkstatt", out temp)){
-                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
-                }else if(!occuredActions.TryGetValue("erkunde_birnenraum", out temp)){
-                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
-                }else if(!occuredActions.TryGetValue("erkunde_keller", out temp)){
-                    mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                // }else if(!occuredActions.TryGetValue("essen", out temp)){
+                //     mBoxCtrl.SetMsg("Ich hab noch garnichts gegessen!");
+                // }else if(!occuredActions.TryGetValue("erkunde_wohnzimmer", out temp)){
+                //     mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                // }else if(!occuredActions.TryGetValue("erkunde_funkraum", out temp)){
+                //     mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                // }else if(!occuredActions.TryGetValue("erkunde_werkstatt", out temp)){
+                //     mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                // }else if(!occuredActions.TryGetValue("erkunde_birnenraum", out temp)){
+                //     mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
+                // }else if(!occuredActions.TryGetValue("erkunde_keller", out temp)){
+                //     mBoxCtrl.SetMsg("Ich bin noch nicht müde.");
                 }else{
                     mBoxCtrl.SetMsg("Tzzzzzz....");
                     occuredActions.Add(Action, true);
+                    NextDay();
                 }
+
+
                 break;
             }
             case "licht_anschalten":
@@ -224,6 +257,7 @@ public class GameController : MonoBehaviour
         audioSource.clip = audioClip;
 
         audioSource.loop = loop;
+        audioSource.volume = 0.04f;
 
         audioSource.Play();
     }
@@ -267,6 +301,6 @@ public class GameController : MonoBehaviour
 
     void Day1Ocean()
     {
-        PlayAudio("400632__inspectorj__ambience-seaside-waves-close-a");
+        //PlayAudio("400632__inspectorj__ambience-seaside-waves-close-a");
     }
 }

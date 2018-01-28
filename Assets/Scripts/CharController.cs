@@ -73,7 +73,6 @@ public class CharController : MonoBehaviour
           climbUp = false;
         }
 
-
         RaycastHit2D interactableHit = Physics2D.Raycast(transform.position, Vector2.down, 3, _interactableLayerMask);
         if (interactableHit.collider != null)
         {
