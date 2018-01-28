@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
 
-                if(!occuredActions.TryGetValue("licht_anschalten", out temp)){
+                if(Global.Gamestate.lightstate == "on"){
                     mBoxCtrl.SetMsg("Ich muss erst das Licht anschalten.");
                 }else if(!occuredActions.TryGetValue("zaehne_putzen", out temp)){
                     mBoxCtrl.SetMsg("Ich denke ich sollte mir erst die Zähne putzen?");
@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
                 mBoxCtrl.SetMsg("Es wird Zeit, das Licht anzuschalten.");
+                Global.Gamestate.lightstate = "on";
                 occuredActions.Add(Action, true);
                 break;
             }
@@ -57,6 +58,7 @@ public class GameController : MonoBehaviour
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
                 mBoxCtrl.SetMsg("Es ist hell. Wir brauchen kein Licht mehr.");
+                Global.Gamestate.lightstate = "off";
                 occuredActions.Add(Action, true);
                 break;
             }

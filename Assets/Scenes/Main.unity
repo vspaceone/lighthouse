@@ -1134,6 +1134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561656466}
   - component: {fileID: 561656465}
+  - component: {fileID: 561656467}
   m_Layer: 0
   m_Name: lampenraum
   m_TagString: Untagged
@@ -1198,6 +1199,19 @@ Transform:
   m_Father: {fileID: 1334212501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561656467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561656464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0330721c3e0914277b0b5211805c8b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSprite: {fileID: 21300000, guid: f56c785e441a143829c2ff87df35cd0f, type: 3}
+  OffSprite: {fileID: 21300000, guid: 9e30b7983509445d98c44ab84d8556a6, type: 3}
 --- !u!1 &577948267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,7 +3799,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1731695354
 Transform:
