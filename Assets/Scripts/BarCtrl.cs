@@ -54,7 +54,6 @@ public class BarCtrl : MonoBehaviour {
 		txtDay = gObjDay.GetComponent<UnityEngine.UI.Text>();
 		txtDay.text = days[Global.Gamestate.dayNumber];
 
-		// TODO Try. Show hoveringAction in raw otherwise
 		try{
 			txtAction = gObjAction.GetComponent<UnityEngine.UI.Text>();
 			txtAction.text = actions[Global.Gamestate.hoveringAction];
