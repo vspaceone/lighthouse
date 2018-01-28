@@ -129,14 +129,6 @@ public class GameController : MonoBehaviour
                 }
                 break;
             }
-            case "blumen_giessen":
-            {
-                GameObject gObj = Instantiate(msgBoxPrefab);
-                MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.SetMsg("Ich liebe meine Blumen.");
-                occuredActions.Add(Action, true);
-                break;
-            }
             case "karte_anschauen":
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
@@ -257,9 +249,8 @@ public class GameController : MonoBehaviour
         audioSource.clip = audioClip;
 
         audioSource.loop = loop;
-        audioSource.volume = 0.04f;
 
-        audioSource.Play();
+        //audioSource.Play();
     }
 
     IEnumerator FadeOutSound(GameObject go, float duration = 2f)

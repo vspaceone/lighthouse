@@ -22,7 +22,7 @@ public class Day1Controller : MonoBehaviour
             {
                 GameObject gObj = Instantiate(msgBoxPrefab);
                 MsgBoxCtrl mBoxCtrl = gObj.GetComponent<MsgBoxCtrl>();
-                mBoxCtrl.SetMsg("Eine neue Nachricht: WETTER: Heute stürmische See. 13 Grad, Wind NW, 10kmh");
+                mBoxCtrl.SetMsg("Wetter: Heute stürmische See. 13 Grad, Wind NW, 10kmh");
                 Global.Gamestate.lightstate = "on";
                 occuredActions.Add(Action, true);
                 completeActions.Add(Action, true);

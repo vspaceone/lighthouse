@@ -31,13 +31,12 @@ public class BarCtrl : MonoBehaviour {
 		actions.Add("dose_holen","Nehme eine Dose");
 		actions.Add("kochen","Koche etwas");
 		actions.Add("essen","Esse etwas");
-		actions.Add("blumen_giessen","Giesse die Blumen");
 		actions.Add("karte_anschauen","Untersuche die Karte");
 		actions.Add("zaehne_putzen","Putze die Zaehne");
 		actions.Add("generator_nachfuellen","Fülle den Generator nach");
 		actions.Add("tomaten_streicheln","Streichle die Tomaten");
 		actions.Add("in_briefkasten_schauen","Schaue in den Briefkasten");
-		actions.Add("fernschreiber_anschauen","Untersuche den Fernschreib");
+		actions.Add("fernschreiber_anschauen","Untersuche den Fernschreiber");
 		actions.Add("funkgeraet_anschauen","Untersuch das Funkgeraet");
 		actions.Add("erkunde_wohnzimmer","");
 		actions.Add("erkunde_keller","");
