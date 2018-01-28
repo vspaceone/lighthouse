@@ -34,6 +34,10 @@ public class Interactable : MonoBehaviour
 
     }
 
+    public string GetNextAction(){
+      return (!_Status ? ActivateAction : DeactivateAction);
+    }
+
     public void Activate()
     {
         switch (InteractionType)

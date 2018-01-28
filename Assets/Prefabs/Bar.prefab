@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 223469929331470450}
   - component: {fileID: 114310809074925314}
   - component: {fileID: 114475395913462872}
-  - component: {fileID: 114793287727749722}
+  - component: {fileID: 114842487511705478}
   m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114793287727749722
+--- !u!114 &114842487511705478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -212,10 +212,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -334,6 +334,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89.86065, y: 261.45}
-  m_SizeDelta: {x: 133.65, y: 44.1}
+  m_AnchoredPosition: {x: 99.47, y: 261.45}
+  m_SizeDelta: {x: 198.94, y: 44.1}
   m_Pivot: {x: 0.5, y: 0.5}

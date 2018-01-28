@@ -65,13 +65,17 @@ public class CharController : MonoBehaviour
         RaycastHit2D interactableHit = Physics2D.Raycast(transform.position, Vector2.down, 3, _interactableLayerMask);
         if (interactableHit.collider != null)
         {
+          Global.Gamestate.hoveringAction = interactableHit.collider.gameObject.GetComponent<Interactable>().GetNextAction();
 
-
+          // if action is activated or AutoActivating
             if (Input.GetKeyDown(KeyCode.Space) || interactableHit.collider.gameObject.GetComponent<Interactable>().AutoActivate == true)
             {
                 interactableHit.collider.gameObject.GetComponent<Interactable>().Activate();
                 _animator.Play("Hurt");
             }
+        }else{
+          Global.Gamestate.hoveringAction = "";
+
         }
 
         float inputX = Input.GetAxis("Horizontal");
