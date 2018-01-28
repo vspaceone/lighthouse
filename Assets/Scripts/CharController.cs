@@ -89,6 +89,12 @@ public class CharController : MonoBehaviour
 
         }
 
+        if( _canClimb ){
+          Global.Gamestate.onLadder = true;
+        }else{
+          Global.Gamestate.onLadder = false;
+        }
+
         float inputX = Input.GetAxis("Horizontal");
 
         _positionVector.x += inputX * MovementSpeedMultiplyer;

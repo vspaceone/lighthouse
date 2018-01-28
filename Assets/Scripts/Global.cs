@@ -10,6 +10,7 @@
 				public static int dayNumber = 0;
 				public static string hoveringAction = "Test";
 				public static string lightstate = "on";
+				public static bool onLadder = false;
 
 
     }
