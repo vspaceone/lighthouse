@@ -116,11 +116,13 @@ public class CharController : MonoBehaviour
             _animator.SetBool("Climbing", false);
 
         }else if(_canClimb && !isClimbing){
+          print("CanClimb and is not climbing");
             _animator.SetBool("Walking", false);
             _animator.SetBool("CanClimb", true);
             _animator.SetBool("Climbing_Up", false);
             _animator.SetBool("Climbing_Down", false);
-        }else if(_canClimb && isClimbing && !wasClimbing){
+        }else if(_canClimb && isClimbing){
+          print("canClimb and is climbing");
           _animator.SetBool("CanClimb", true);
           if(climbUp){
             _animator.SetBool("Climbing_Up", true);
